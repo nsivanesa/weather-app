@@ -11,8 +11,8 @@ A minimalist, client-side weather lookup app built with HTML, CSS, and vanilla J
 ## Setup
 
 1. Copy or create an OpenWeatherMap API key from https://openweathermap.org/api.
-2. Open `script.js` and replace `YOUR_API_KEY_HERE` with your own API key.
-3. Open `index.html` in a browser to use the app locally.
+2. Open `index.html` in a browser to use the app locally.
+3. Enter your API key in the app form before requesting weather data.
 
 ## Usage
 
