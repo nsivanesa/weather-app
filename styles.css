@@ -1,0 +1,209 @@
+:root {
+  color-scheme: light;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #eef3f5;
+  color: #1b2530;
+  accent-color: #2b9bbf;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: linear-gradient(180deg, #f6f8fa 0%, #e7ecef 100%);
+}
+
+.app-shell {
+  width: min(100%, 760px);
+  display: grid;
+  gap: 24px;
+}
+
+.hero-card,
+.result-card {
+  background: #ffffff;
+  border: 1px solid rgba(43, 82, 105, 0.08);
+  border-radius: 24px;
+  box-shadow: 0 20px 70px rgba(15, 31, 45, 0.08);
+  padding: 28px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 18px;
+  background: #e8f4f9;
+  font-size: 1.6rem;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 2.5vw, 2.4rem);
+}
+
+.brand p {
+  margin: 6px 0 0;
+  color: #556a7b;
+}
+
+.weather-form {
+  display: grid;
+  gap: 16px;
+}
+
+.field-row {
+  display: grid;
+  gap: 8px;
+}
+
+label {
+  font-size: 0.95rem;
+  color: #556a7b;
+}
+
+input {
+  width: 100%;
+  border: 1px solid #d9e3ea;
+  border-radius: 14px;
+  padding: 14px 16px;
+  font-size: 1rem;
+  background: #fbfcfd;
+  color: #1b2530;
+}
+
+input:focus {
+  outline: none;
+  border-color: #2b9bbf;
+  box-shadow: 0 0 0 3px rgba(43, 155, 191, 0.12);
+}
+
+button {
+  width: 100%;
+  border: none;
+  border-radius: 14px;
+  padding: 14px 18px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: #2b9bbf;
+  cursor: pointer;
+  transition: transform 160ms ease, background 160ms ease;
+}
+
+button:hover,
+button:focus-visible {
+  background: #207da8;
+  transform: translateY(-1px);
+}
+
+.message {
+  margin: 0;
+  min-height: 1.4rem;
+  color: #d04545;
+  font-size: 0.95rem;
+}
+
+.result-card.hidden {
+  display: none;
+}
+
+.result-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.result-location {
+  margin: 0 0 8px;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.result-condition {
+  margin: 0;
+  color: #556a7b;
+}
+
+.weather-icon {
+  width: 84px;
+  height: 84px;
+}
+
+.temperature-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin: 24px 0 22px;
+}
+
+.temperature {
+  margin: 0;
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  font-weight: 700;
+}
+
+.temperature-label {
+  color: #556a7b;
+  font-size: 1.1rem;
+}
+
+.stats-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.stat-card {
+  background: #f7fbfd;
+  border: 1px solid rgba(43, 82, 105, 0.06);
+  border-radius: 18px;
+  padding: 18px;
+}
+
+.stat-label {
+  margin: 0 0 10px;
+  color: #6a7c8d;
+  font-size: 0.95rem;
+}
+
+.stat-card p:last-child {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+@media (max-width: 620px) {
+  .app-shell {
+    gap: 18px;
+  }
+
+  .result-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .weather-icon {
+    width: 72px;
+    height: 72px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}

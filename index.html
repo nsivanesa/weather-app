@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WEATHERLY</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section class="hero-card">
+      <div class="brand">
+        <span class="brand-mark">☁️</span>
+        <div>
+          <h1>WEATHERLY</h1>
+          <p>Lookup current weather for any city and country.</p>
+        </div>
+      </div>
+
+      <form id="weather-form" class="weather-form" novalidate>
+        <div class="field-row">
+          <label for="city-input">City</label>
+          <input id="city-input" name="city" type="text" autocomplete="off" placeholder="Sydney" required />
+        </div>
+
+        <div class="field-row">
+          <label for="country-input">Country</label>
+          <input id="country-input" name="country" type="text" autocomplete="off" placeholder="AU or Australia" />
+        </div>
+
+        <button type="submit">Get Weather</button>
+        <p id="message" class="message" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section id="weather-result" class="result-card hidden" aria-live="polite">
+      <div class="result-header">
+        <div>
+          <p class="result-location" id="location-name"></p>
+          <p class="result-condition" id="condition-text"></p>
+        </div>
+        <img id="weather-icon" class="weather-icon" src="" alt="" />
+      </div>
+
+      <div class="temperature-row">
+        <p class="temperature" id="temperature-value"></p>
+        <p class="temperature-label">°C</p>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <p class="stat-label">Humidity</p>
+          <p id="humidity-value">--</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-label">Wind</p>
+          <p id="wind-value">--</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
